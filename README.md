@@ -21,11 +21,9 @@ Our goal is to produce parameter-efficient models that preserve high-level gener
 
 | Model Name | Base Model | Params | Key Feature / Benchmark | Hugging Face Repo | Status |
 | :--- | :--- | :---: | :--- | :--- | :---: |
-| **Scalar Phos Pro** | Llama-3.1-8B-Instruct | 8.0B | **66.55% MMLU** — Domain reasoning & instruction following | [`scalar-ai/scalar-phos-pro`](https://huggingface.co/scalar-ai/scalar-phos-pro) | ✅ Released |
-| **Scalar Phos Flash** | Llama-3.2-3B-Instruct | 3.2B | **26.79% MMLU-Pro** — Low-latency, high-throughput edge model | [`scalar-ai/scalar-phos-flash`](https://huggingface.co/scalar-ai/scalar-phos-flash) | ✅ Released |
-| **Scalar Phos Bit** | Llama-3.2-1B-Instruct | 1.2B | Ultra-lightweight edge reasoning for embedded devices | — | 🛠️ Pipeline |
-| **Scalar Phos Vision** | Llama-3.2-11B-Vision | 11.0B | Multimodal document parsing & visual reasoning | — | 🧪 Research |
-
+| **Scalar Phos Pro** | Llama-3.1-8B-Instruct | 8.0B | **66.55% MMLU** — Domain reasoning & instruction following | [`scalar-ai/scalar-phos-pro`](https://huggingface.co/scalar-ai/scalar-phos-pro) | Released |
+| **Scalar Phos Flash** | Llama-3.2-3B-Instruct | 3.2B | **26.79% MMLU-Pro** — Low-latency, high-throughput edge model | [`scalar-ai/scalar-phos-flash`](https://huggingface.co/scalar-ai/scalar-phos-flash) | Released |
+| **Scalar Phos Bit** | Llama-3.2-1B-Instruct | 1.2B | Ultra-lightweight edge reasoning for embedded devices | — | Pipeline |
 
 ## Benchmark Highlights
 
