@@ -103,9 +103,3 @@ This repository uses a dual-licensing structure to separate the codebase from th
 - **Model Weights & Adapters:** The fine-tuned model weights, LoRA adapters, and GGUF binaries hosted on Hugging Face are governed by their respective upstream base model licenses—specifically the **[Meta Llama 3.1 Community License](https://www.llama.com/llama3_1/license/)** (for Scalar Phos Pro) and **[Meta Llama 3.2 Community License](https://www.llama.com/llama3_2/license/)** (for Scalar Phos Flash & Micro).
 
 Please review [`USE_POLICY.md`](./USE_POLICY.md) for acceptable use guidelines, attribution rules, and safety policies.
-
-## Community & Support
-
-* **Hugging Face Org:** [@scalar-ai](https://huggingface.co/scalar-ai)
-* **GitHub Repository:** [studioframes/scalar-phos](https://github.com/studioframes)
-* **Discussions:** Feel free to open an issue or start a discussion on our Hugging Face model tabs for model requests and dataset feedback!
