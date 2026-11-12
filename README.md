@@ -1,13 +1,13 @@
 <div align="center">
 
-![scalar](https://cdn-uploads.huggingface.co/production/uploads/6aca4ee66c62fb7e0c81b873/FuiwSU0yBFIpUbIEinpFg.png)
+[![scalar](https://cdn-uploads.huggingface.co/production/uploads/6aca4ee66c62fb7e0c81b873/FuiwSU0yBFIpUbIEinpFg.png)]()
 
 **Open-Source Research, Training Pipelines, and Evaluation Suite for Parameter-Efficient Language Models**
 
-![Toolkit](https://img.shields.io/badge/Toolkit-Unsloth_|_PEFT-000000?style=flat-square&logo=python&logoColor=white)
-![Framework](https://img.shields.io/badge/Framework-PyTorch_|_vLLM-000000?style=flat-square&logo=pytorch&logoColor=white)
-![Deployment](https://img.shields.io/badge/Formats-LoRA_|_GGUF-000000?style=flat-square&logo=huggingface&logoColor=white)
-![Organization](https://img.shields.io/badge/Hugging_Face-scalar--ai-000000?style=flat-square&logo=huggingface&logoColor=white)
+[![Toolkit](https://img.shields.io/badge/Toolkit-Unsloth_|_PEFT-000000?style=flat-square&logo=python&logoColor=white)]()
+[![Framework](https://img.shields.io/badge/Framework-PyTorch_|_vLLM-000000?style=flat-square&logo=pytorch&logoColor=white)]()
+[![Deployment](https://img.shields.io/badge/Formats-LoRA_|_GGUF-000000?style=flat-square&logo=huggingface&logoColor=white)]()
+[![Organization](https://img.shields.io/badge/Hugging_Face-scalar--ai-000000?style=flat-square&logo=huggingface&logoColor=white)]()
 
 </div>
 
