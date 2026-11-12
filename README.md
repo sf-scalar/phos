@@ -77,7 +77,7 @@ ollama run hf.co/scalar-ai/scalar-phos-pro:Q4_K_M
 
 ```
 
-## 🧪 Training & Evaluation
+## Training & Evaluation
 
 ### Training Pipeline
 
@@ -97,9 +97,14 @@ bash evaluation/run_lm_eval.sh --model scalar-ai/scalar-phos-flash --task mmlu_p
 
 ## Compliance & Safety
 
-All code, and documentation in this repository adhere to the **Llama 3.1 & 3.2 Community Licenses**. Please review [`USE_POLICY.md`](./USE_POLICY.md) for full compliance details, acceptable use guidelines, and safety policies.
+This repository uses a dual-licensing structure to separate the codebase from the underlying model weights:
 
-## 🤝 Community & Support
+- **Code, Scripts & Documentation:** All source code, training configurations, evaluation scripts, and documentation in this GitHub repository are licensed under the **[Apache License 2.0](./LICENSE)**.
+- **Model Weights & Adapters:** The fine-tuned model weights, LoRA adapters, and GGUF binaries hosted on Hugging Face are governed by their respective upstream base model licenses—specifically the **[Meta Llama 3.1 Community License](https://www.llama.com/llama3_1/license/)** (for Scalar Phos Pro) and **[Meta Llama 3.2 Community License](https://www.llama.com/llama3_2/license/)** (for Scalar Phos Flash & Micro).
+
+Please review [`USE_POLICY.md`](./USE_POLICY.md) for acceptable use guidelines, attribution rules, and safety policies.
+
+## Community & Support
 
 * **Hugging Face Org:** [@scalar-ai](https://huggingface.co/scalar-ai)
 * **GitHub Repository:** [studioframes/scalar-phos](https://github.com/studioframes)
