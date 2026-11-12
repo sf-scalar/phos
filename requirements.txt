@@ -1,0 +1,18 @@
+# Core Fine-Tuning & Quantization
+torch>=2.4.0
+unsloth
+transformers>=4.46.0
+peft>=0.13.0
+trl>=0.12.0
+accelerate>=1.0.0
+bitsandbytes>=0.44.0
+datasets>=3.0.0
+huggingface-hub>=0.26.0
+pyyaml>=6.0.0
+
+# Benchmarking (EleutherAI Harness + vLLM backend)
+lm-eval[vllm]>=0.4.7
+
+# Local Deployment & Chat UI
+gradio>=5.0.0
+openai>=1.50.0
