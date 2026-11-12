@@ -3,15 +3,11 @@
 **Last Updated:** 10 November 2026  
 **Applies To:** All models, adapters, GGUF binaries, code, and datasets released by **Scalar AI** (including but not limited to `scalar-phos-pro`, `scalar-phos-flash`, and derivative weights).
 
----
-
 ## 1. Overview
 
 At **Scalar AI**, our mission is to advance high-performance, open-weights language models through precision fine-tuning and quantization. We believe in open, accessible, and transparent AI development. To ensure our models are used safely, ethically, and responsibly, all downstream users, developers, and organizations must adhere to this Acceptable Use Policy.
 
 By downloading, deploying, fine-tuning, or interacting with any Scalar AI model weights or artifacts, you agree to comply with this policy in full.
-
----
 
 ## 2. Universal Standards & Base License Adherence
 
@@ -19,8 +15,6 @@ Scalar AI models are built upon foundational open-source architectures (such as 
 
 1. **Upstream License Compliance:** Users must strictly comply with the underlying base model license agreement (e.g., the *Llama 3.1 / 3.2 Community License Agreement*).
 2. **Attribution:** Any public deployment, service, or fine-tune derived from Scalar AI weights should retain appropriate attribution to Scalar AI and the underlying base architecture.
-
----
 
 ## 3. Prohibited Uses
 
@@ -45,8 +39,6 @@ You may **NOT** use Scalar AI models, directly or indirectly, for any of the fol
 * **Hate Speech & Harassment:** Generating content that incites violence, promotes hatred, or encourages discrimination against individuals or groups based on race, ethnicity, religion, disability, gender, age, sexual orientation, or gender identity.
 * **Non-Consensual Intimate Imagery:** Generating or manipulating non-consensual sexual or intimate content.
 
----
-
 ## 4. Responsible Deployment Recommendations
 
 When deploying Scalar AI models (via LoRA, merged checkpoints, or GGUF quantization) into production environments, developers are strongly encouraged to:
@@ -55,13 +47,9 @@ When deploying Scalar AI models (via LoRA, merged checkpoints, or GGUF quantizat
 2. **Conduct Domain Testing:** Test and evaluate fine-tuned checkpoints against relevant safety and domain-accuracy benchmarks prior to public launch.
 3. **Maintain Human-in-the-Loop Oversight:** Keep qualified human oversight for high-risk applications involving domain-specific legal, financial, or technical advice.
 
----
-
 ## 5. Disclaimer of Liability
 
 Scalar AI releases its open-weights models, code, and documentation **"AS IS" WITHOUT WARRANTY OF ANY KIND**, express or implied. Large language models can occasionally produce inaccurate, biased, or unexpected outputs ("hallucinations"). Scalar AI is not liable for any direct, indirect, incidental, or consequential damages resulting from the use or misuse of our released models.
-
----
 
 ## 6. Feedback & Reporting Violations
 
