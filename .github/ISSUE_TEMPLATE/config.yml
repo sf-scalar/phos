@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🤗 Scalar Phos Models on Hugging Face
+    url: https://huggingface.co/scalar-ai
+    about: Download model weights, LoRA adapters, and GGUF binaries directly from our Hugging Face organization.
+  - name: 📜 Acceptable Use Policy & Licensing
+    url: https://github.com/scalar-ai/scalar-phos/blob/main/USE_POLICY.md
+    about: Review acceptable use guidelines and Meta Llama Community License terms before deploying weights.
