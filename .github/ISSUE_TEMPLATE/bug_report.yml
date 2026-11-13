@@ -1,0 +1,51 @@
+name: Bug Report
+description: File a bug or report an unexpected error in training, evaluation, or CLI utilities.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+  - attributes:
+      value: |
+        Thanks for helping improve Scalar Phos! Please provide clear details so we can reproduce and fix the issue.
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Describe the unexpected behavior...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps or commands to reproduce the behavior.
+      placeholder: |
+        1. Run `python setup.py`
+        2. Execute `python training/train_qlora.py ...`
+        3. See error...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Hardware & Environment
+      description: Provide details about your runtime environment.
+      placeholder: |
+        - OS: Ubuntu 22.04 / macOS / Windows 11
+        - GPU: NVIDIA T4 (16GB VRAM) / RTX 409 / CPU only
+        - Python version: 3.11.x
+        - PyTorch version: 2.x.x
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs or Error Stack Trace
+      description: Paste any error messages, traceback dumps, or terminal output.
+      placeholder: |
+        ```text
+        Paste traceback here...
+        ```
+    validations:
+      required: false
