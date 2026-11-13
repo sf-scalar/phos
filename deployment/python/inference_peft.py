@@ -6,9 +6,11 @@ Licensed under the Apache License 2.0
 """
 
 import argparse
+import os
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
+from huggingface_hub import file_exists
 
 
 def parse_args():
@@ -33,10 +35,19 @@ def main():
     base_model = AutoModelForCausalLM.from_pretrained(
         args.base_model,
         torch_dtype=torch.bfloat16 if device == "cuda" else torch.float32,
-        device_map="auto"
+        device_map="auto",
+        use_safetensors=True,
     )
 
     # 2. Attach PEFT Adapters
+    adapter_weights = os.path.join(args.adapter, "adapter_model.safetensors")
+    if not (
+        os.path.isfile(adapter_weights)
+        if os.path.isdir(args.adapter)
+        else file_exists(args.adapter, "adapter_model.safetensors")
+    ):
+        raise ValueError(f"Adapter {args.adapter} must provide adapter_model.safetensors")
+
     model = PeftModel.from_pretrained(base_model, args.adapter)
     model.eval()
 
