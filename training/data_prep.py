@@ -51,6 +51,15 @@ def format_sample(example):
     return {"text": formatted_text}
 
 
+def escape_terminal_controls(text):
+    return "".join(
+        f"\\x{ord(char):02x}"
+        if (ord(char) < 32 and char != "\n") or 0x7f <= ord(char) <= 0x9f
+        else char
+        for char in text
+    )
+
+
 def main():
     args = parse_args()
 
@@ -82,7 +91,8 @@ def main():
     print(f"Saved formatted dataset to: {args.output_path}")
     print("\nSample formatted output preview:")
     print("-" * 60)
-    print(processed_dataset[0]["text"][:500] + "...\n[TRUNCATED]")
+    preview = escape_terminal_controls(processed_dataset[0]["text"][:500])
+    print(preview + "...\n[TRUNCATED]")
     print("-" * 60)
 
 
