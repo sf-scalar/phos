@@ -1,6 +1,6 @@
 <div align="center">
 
-[![scalar](https://cdn-uploads.huggingface.co/production/uploads/6aca4ee66c62fb7e0c81b873/FuiwSU0yBFIpUbIEinpFg.png)]()
+[![scalar](https://github.com/user-attachments/assets/39ffab3f-b3c5-4b5d-b1a6-1f13f41460f5)]()
 
 **Open-Source Research, Training Pipelines, and Evaluation Suite for Parameter-Efficient Language Models**
 
