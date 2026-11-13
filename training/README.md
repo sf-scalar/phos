@@ -34,7 +34,6 @@ Fine-tuning utilizes **4-bit QLoRA** (Quantized Low-Rank Adaptation) via Unsloth
 1. Ensure your environment is fully provisioned by running the root setup script:
 ```bash
 python setup.py
-
 ```
 
 2. Populate your `.env` file with your Hugging Face write token and optional Weights & Biases API key:
@@ -43,7 +42,12 @@ cp .env.example .env
 # Edit .env with your credentials
 ```
 
-3. Execute the QLoRA training script pointing to your desired model configuration:
+3. *(Optional)* Prepare or format your custom instruction dataset using the preprocessing script:
+```bash
+python training/data_prep.py --max_samples 1000
+```
+
+4. Execute the QLoRA training script pointing to your desired model configuration:
 **To train Scalar Phos Flash (3.2B):**
 ```bash
 python training/train_qlora.py --config training/configs/phos_flash_3b.json
