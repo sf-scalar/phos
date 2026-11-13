@@ -4,7 +4,7 @@ title: "[Bug]: "
 labels: ["bug", "needs-triage"]
 body:
   - type: markdown
-  - attributes:
+    attributes:
       value: |
         Thanks for helping improve Scalar Phos! Please provide clear details so we can reproduce and fix the issue.
   - type: textarea
@@ -33,7 +33,7 @@ body:
       description: Provide details about your runtime environment.
       placeholder: |
         - OS: Ubuntu 22.04 / macOS / Windows 11
-        - GPU: NVIDIA T4 (16GB VRAM) / RTX 409 / CPU only
+        - GPU: NVIDIA T4 (16GB VRAM) / RTX 4090 / CPU only
         - Python version: 3.11.x
         - PyTorch version: 2.x.x
     validations:
