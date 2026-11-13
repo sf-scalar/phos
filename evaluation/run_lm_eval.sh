@@ -24,7 +24,7 @@ echo "==========================================================================
 
 lm_eval \
     --model vllm \
-    --model_args pretrained="$MODEL_ID",dtype=bfloat16,gpu_memory_utilization="$GPU_MEM_UTIL",max_model_len="$MAX_MODEL_LEN" \
+    --model_args pretrained="$MODEL_ID",dtype=bfloat16,gpu_memory_utilization="$GPU_MEM_UTIL",max_model_len="$MAX_MODEL_LEN",load_format=safetensors \
     --tasks "$TASK" \
     --batch_size "$BATCH_SIZE" \
     --output_path "$OUTPUT_DIR" \
