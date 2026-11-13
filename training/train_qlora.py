@@ -41,6 +41,7 @@ def main():
         model_name=model_name,
         max_seq_length=max_seq_length,
         load_in_4bit=load_in_4bit,
+        use_safetensors=True,
     )
 
     # 2. Setup PEFT / QLoRA Adapters
