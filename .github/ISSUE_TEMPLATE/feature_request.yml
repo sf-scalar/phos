@@ -4,7 +4,7 @@ title: "[Feature]: "
 labels: ["enhancement", "proposal"]
 body:
   - type: markdown
-  - attributes:
+    attributes:
       value: |
         We love new ideas! Tell us about the feature or optimization you'd like to see added to Scalar Phos.
   - type: textarea
