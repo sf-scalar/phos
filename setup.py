@@ -64,6 +64,16 @@ def print_banner():
     )
 
 
+def _windows_system_path(*parts):
+    import ctypes
+
+    system_dir = ctypes.create_unicode_buffer(260)
+    length = ctypes.windll.kernel32.GetSystemDirectoryW(system_dir, len(system_dir))
+    if not length or length >= len(system_dir):
+        return None
+    return os.path.join(system_dir.value, *parts)
+
+
 def get_system_specs():
     """Gathers cross-platform hardware specs without external dependencies."""
     os_name = platform.system()
@@ -81,13 +91,18 @@ def get_system_specs():
                         ram_gb = int(line.split()[1]) / (1024**2)
                         break
         elif os_name == "Windows":
-            out = subprocess.check_output(
-                ["wmic", "computersystem", "get", "TotalPhysicalMemory"], text=True
-            )
-            ram_bytes = [int(s) for s in out.split() if s.isdigit()][0]
-            ram_gb = ram_bytes / (1024**3)
+            wmic_path = _windows_system_path("wbem", "WMIC.exe")
+            if wmic_path:
+                out = subprocess.check_output(
+                    [wmic_path, "computersystem", "get", "TotalPhysicalMemory"],
+                    text=True,
+                )
+                ram_bytes = [int(s) for s in out.split() if s.isdigit()][0]
+                ram_gb = ram_bytes / (1024**3)
         elif os_name == "Darwin":
-            out = subprocess.check_output(["sysctl", "-n", "hw.memsize"], text=True)
+            out = subprocess.check_output(
+                ["/usr/sbin/sysctl", "-n", "hw.memsize"], text=True
+            )
             ram_gb = int(out.strip()) / (1024**3)
     except Exception:
         pass
@@ -96,12 +111,35 @@ def get_system_specs():
     vram_gb = 0.0
     gpu_name = "None (CPU / Integrated Graphics)"
 
-    if shutil.which("nvidia-smi"):
+    if os_name == "Windows":
+        nvidia_smi_candidates = [
+            _windows_system_path("nvidia-smi.exe"),
+            r"C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe",
+        ]
+    elif os_name == "Linux":
+        nvidia_smi_candidates = [
+            "/usr/bin/nvidia-smi",
+            "/usr/local/bin/nvidia-smi",
+            "/usr/local/cuda/bin/nvidia-smi",
+            "/usr/lib/wsl/lib/nvidia-smi",
+        ]
+    else:
+        nvidia_smi_candidates = []
+
+    nvidia_smi = next(
+        (
+            path
+            for path in nvidia_smi_candidates
+            if path and os.path.isfile(path)
+        ),
+        None,
+    )
+    if nvidia_smi:
         try:
             smi_out = (
                 subprocess.check_output(
                     [
-                        "nvidia-smi",
+                        nvidia_smi,
                         "--query-gpu=name,memory.total",
                         "--format=csv,noheader,nounits",
                     ],
